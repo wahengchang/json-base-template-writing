@@ -1,0 +1,14 @@
+{
+  "place": {
+    "type": "const",
+    "input": "{input}"
+  },
+  "date": {
+    "type": "const",
+    "input": "{input}"
+  },
+  "answer": { 
+    "type": "deepseek",
+    "input": "translate the twitter below to zh-cn:\n'{input} '"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "place": {
+    "type": "const",
+    "input": "tokyo"
+  },
+  "research": { 
+    "type": "perplexity",
+    "input": "before traveling to {place},search for 5 must go location, and weather of today, output in clear and short " ,
+    "outputIgnore": true
+  },
+  "answer": { 
+    "type": "chatgpt",
+    "input": "{research}\n-=-=-=-=-=-=\n\nbase on the information above, write a twitter post about your trip plan (reply in short)" ,
+    "model": "gpt-4o-mini"
+  }
+}
+  

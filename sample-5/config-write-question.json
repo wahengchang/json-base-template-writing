@@ -1,0 +1,26 @@
+{
+  "place": {
+    "type": "param",
+    "input": "0"
+  },
+  "date": {
+    "type": "param",
+    "input": "1"
+  },
+  "tone": {
+    "type": "randomList",
+    "input": "Casual::informative::argumentative::conversational::relatable::enthusiastic::critical::supportive::neutral",
+    "outputIgnore": true
+  },
+  "research": { 
+    "type": "perplexity",
+    "input": "before traveling to {place},search for 5 must go location, and weather of {date}, output in clear and short " ,
+    "outputIgnore": true
+  },
+  "answer": { 
+    "type": "chatgpt",
+    "input": "{research}\n-=-=-=-=-=-=\n\nbase on the information above, write a twitter post in the tone of {tone} about your trip plan on{date} (reply in short)" ,
+    "model": "gpt-4o-mini"
+  }
+}
+  

@@ -1,0 +1,28 @@
+{
+  "name": "json-base-template-writing",
+  "version": "1.0.0",
+  "description": "A template project for JSON-based data processing with API integration support",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [
+    "json",
+    "template",
+    "api",
+    "data-processing"
+  ],
+  "author": "Peter Chang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wahengchang/json-base-template"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

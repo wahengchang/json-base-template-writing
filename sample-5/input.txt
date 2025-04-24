@@ -1,0 +1,3 @@
+hanoi
+hong kong
+tokyo
