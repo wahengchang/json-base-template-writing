@@ -18,10 +18,12 @@ class TaskOrchestrator {
 
         taskConfig.input = TaskExecutor.resolvePlaceholders(taskConfig.input, results);
 
+        // console.log(`Task [${key}] input:`, `${taskConfig.input}`);
+
         const result = await this.executor.executeTask(taskConfig);
         results[key] = result;
 
-        console.log(`Task [${key}] result:`, `${result}`.substring(0, 20));
+        console.log(`Task [${key}] result:`, `${result}`.substring(0, 50));
       }
 
       this.results = results;

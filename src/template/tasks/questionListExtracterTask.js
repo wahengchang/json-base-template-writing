@@ -44,9 +44,6 @@ class PerplexityTask {
       );
 
       const data = response.data.choices[0].message.function_call.arguments;
-
-      console.log('-=-=-=-=-=1 data, ',data)
-
       const questions = JSON.parse(data).questions;
       return questions
     } catch (error) {

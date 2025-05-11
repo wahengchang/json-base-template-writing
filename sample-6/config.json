@@ -1,0 +1,16 @@
+{
+  "topic": {
+    "type": "const",
+    "input": "Software engineer going to tokyo"
+  },
+  "questions": {
+    "type": "questionListExtracter",
+    "input": "Generate 3 frequently asked questions about {topic}",
+    "outputIgnore": true
+  },
+  "answers": {
+    "type": "chatgpt",
+    "input": "For the topic '{topic}', here are some questions, please write the answer, and output in plaintext format: \n\n{questions}",
+    "model": "gpt-4o-mini"
+  }
+}
