@@ -4,7 +4,7 @@ const InputHandler = require('../src/fileHandler/singlelineHandler');
 const path = require('path');
 
 const inputFilePath = path.resolve(__dirname, './input.txt');
-const config = path.resolve(__dirname, './config-write-question.json');
+const config = path.resolve(__dirname, './trip-planner-config.json');
 
 async function main() {
   try {

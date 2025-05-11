@@ -4,7 +4,7 @@ const path = require('path');
 
 async function main() {
   try {
-    const config = path.resolve(__dirname, './config-write-question.json');
+    const config = path.resolve(__dirname, './config.json');
 
     const orchestrator = new TaskOrchestrator(config);
     const result = await orchestrator.run();

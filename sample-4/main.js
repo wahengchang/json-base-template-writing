@@ -6,7 +6,7 @@ const path = require('path');
 
 const inputFilePath = path.resolve(__dirname, './input.txt');
 const outputFilePath = path.resolve(__dirname, './output');
-const config = path.resolve(__dirname, './config-write-question.json');
+const config = path.resolve(__dirname, './trip-planner-config.json');
 
 async function main() {
   try {
