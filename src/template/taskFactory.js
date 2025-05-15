@@ -1,4 +1,5 @@
 const ChatgptTask = require('./tasks/chatgptTask');
+const ChatgptSearchTask = require('./tasks/chatgptSearch');
 const PerplexityTask = require('./tasks/perplexityTask');
 const RandomDateTimeTask = require('./tasks/randomDateTimeTask');
 const RandomListTask = require('./tasks/randomListTask');
@@ -15,6 +16,7 @@ class TaskFactory {
     switch (taskType) {
       case 'chatgpt': return new ChatgptTask();
       case 'deepseek': return new DeepSeekTask();
+      case 'chatgptSearch': return new ChatgptSearchTask();
       case 'perplexity': return new PerplexityTask();
       case 'randomDateTime': return new RandomDateTimeTask();
       case 'randomList': return new RandomListTask();

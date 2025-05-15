@@ -39,6 +39,7 @@ A configuration file is a JSON object where each key represents a task. Tasks ar
 | `markdownToHtml` | Converts markdown to HTML | `input` |
 | `replace` | Performs text replacement | `input`, `find`, `replace` |
 | `deepseek` | Uses DeepSeek AI model | `input` |
+| `chatgptSearch` | Uses OpenAI Responses API with web search for real-time info | `input` |
 | `randomDateTime` | Generates a random date/time | `start`, `end` |
 
 ### Task Type Details and Examples
@@ -145,6 +146,18 @@ A configuration file is a JSON object where each key represents a task. Tasks ar
   }
   ```
 
+#### `chatgptSearch`
+- **Description**: Uses OpenAI Responses API with web search tool for real-time or up-to-date info
+- **Properties**:
+  - `input`: The query or prompt for web-augmented generation
+- **Example**:
+  ```json
+  {
+    "type": "chatgptSearch",
+    "input": "make one paragraph today summary about stock - tesla"
+  }
+  ```
+
 #### `deepseek`
 - **Description**: Uses DeepSeek AI model
 - **Properties**:
@@ -195,6 +208,26 @@ You can reference the output of previous tasks using `{taskName}` syntax in your
 ```
 
 ## Complete Examples
+
+### Example: Real-Time Stock Summary & Social Post (sample-1.1)
+```json
+{
+  "stock": {
+    "type": "const",
+    "input": "tesla"
+  },
+  "research": {
+    "type": "chatgptSearch",
+    "input": "make one paragraph today summary about stock - {stock}",
+    "outputIgnore": true
+  },
+  "answer": {
+    "type": "chatgpt",
+    "input": "{research}\n-=-=-=-=-=-=\n\nbased on the information above, write a twitter post (mention the price today,reply in short)",
+    "model": "gpt-4o-mini"
+  }
+}
+```
 
 ### Example 1: Simple Q&A Generator
 

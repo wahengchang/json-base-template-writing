@@ -1,0 +1,16 @@
+{
+  "stock": {
+    "type": "const",
+    "input": "tesla"
+  },
+  "research": {
+    "type": "chatgptSearch",
+    "input": "make one paragraph today summary about stock - {stock}",
+    "outputIgnore": true
+  },
+  "answer": {
+    "type": "chatgpt",
+    "input": "{research}\n-=-=-=-=-=-=\n\nbased on the information above, write a twitter post (mention the price today,reply in short)",
+    "model": "gpt-4o-mini"
+  }
+}
