@@ -1,0 +1,29 @@
+{
+  "filename": {
+    "type": "param",
+    "input": "0"
+  },
+  "location": {
+    "type": "randomList",
+    "input": "uk::crazy heaven::japan"
+  },
+  "theme": {
+    "type": "chatgpt",
+    "input": "idea of interaction of 2 animal in {location}, output in clear and short",
+    "model": "gpt-4o-mini",
+    "outputIgnore": true
+  },
+  "style": {
+    "type": "chatgpt",
+    "input": "think of painter who is famous in {location}, and style of painter (output only the name)",
+    "outputIgnore": true
+  },
+  "generateImage": {
+    "type": "generateImage",
+    "input": "Generate an image in the style of {style}, with the theme of :{theme}",
+    "outputFile": "{filename}",
+    "response_format": "url",
+    "size": "1024x1024",
+    "n": 1
+  }
+}

@@ -10,6 +10,7 @@ const ParamTask = require('./tasks/paramTask');
 const DeepSeekTask = require('./tasks/deepseekTask');
 const QuestionListExtracterTask = require('./tasks/questionListExtracterTask');
 const TagsExtracterTask = require('./tasks/tagsExtracterTask');
+const GenerateImageTask = require('./tasks/generateImageTask');
 
 class TaskFactory {
   static getTask(taskType, extraParams) {
@@ -26,6 +27,7 @@ class TaskFactory {
       case 'tagsExtracter': return new TagsExtracterTask();
       case 'replace': return new Replaceask();
       case 'param': return new ParamTask(extraParams);
+      case 'generateImage': return new GenerateImageTask();
       default: throw new Error(`Unsupported task type: ${taskType}`);
     }
   }
